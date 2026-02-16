@@ -1,0 +1,64 @@
+/* me-styles.css */
+
+.games-card {
+    min-height: 450px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Empuja el texto hacia abajo */
+}
+
+.card-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.2) 100%);
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Variables por Juego */
+.theme-hk { --accent-color: #34495e; --bg-accent: #1a252f;}
+.theme-satisfactory { --accent-color: #f39c12; --bg-accent: #2c1e05;}
+.theme-persona { --accent-color: #e74c3c; --bg-accent: #2c0b05;}
+.theme-lol { --accent-color: #c8aa6e; --bg-accent: #091428; }
+.theme-cs { --accent-color: #de9b35; --bg-accent: #25282e; }
+.theme-dbd { --accent-color: #a30000; --bg-accent: #1a0000; }
+.theme-alanwake { --accent-color: #3fe0d0; --bg-accent: #0a1a1a; }
+
+/* Efecto de desvanecimiento para el texto */
+#displayTitle, #displayDesc {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-ctrl {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px); /* Efecto moderno de cristal */
+    border: 1px solid var(--accent-color);
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.btn-ctrl:hover {
+    background: var(--accent-color);
+}
+
+.games-header {
+    display: flex;
+    justify-content: flex-end; /* Botones arriba a la derecha */
+}
+
