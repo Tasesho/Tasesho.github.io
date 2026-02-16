@@ -314,6 +314,28 @@ nav a {
     margin-bottom: 30px;
 }
 
+.blog-link {
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #1791cf;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.blog-link .prompt {
+    color:#1791cf;
+    font-weight: bold;
+}
+
+.blog-link:hover {
+    background-color: #1791cf;
+    color:#000;
+    box-shadow: 0 0 15px rgba(23,145,207,0.4);
+}
+
 .me-link {
     font-size: 1.2rem;
     color: #fff;

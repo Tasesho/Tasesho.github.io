@@ -1,5 +1,20 @@
 /* me-styles.css */
 
+.wdil-header{
+    text-align: center;
+    margin-bottom: 30px;
+
+}
+
+.wdil-card{
+    min-height: 50px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    display: flex;
+    border-bottom: 20px;
+    margin-bottom: 30px;
+}
+
 .games-card {
     min-height: 450px;
     border-radius: 15px;
@@ -62,3 +77,53 @@
     justify-content: flex-end; /* Botones arriba a la derecha */
 }
 
+
+.bento-grid {
+    display: grid;
+    /* 4 columnas que se ajustan solas */
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px; /* Altura base por fila */
+    gap: 1.5rem;
+    padding: 20px;
+}
+
+.bento-item {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* El "Feature" (Monogatari) ocupa más espacio */
+.area-featured {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* Microanimación de Elevación (Referencia Codemotion) */
+.bento-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* El contenido (Texto sobre la imagen) */
+.bento-content {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.bento-item:hover .bento-content {
+    opacity: 1;
+}
