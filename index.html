@@ -1,5 +1,4 @@
 <!DOCTYPE html> 
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,220 +13,93 @@
 </head>
 <body>
 
-    <nav class="folder-tabs">
-        <ul id="tab-list">
-            <li class="tab-active" data-target="home">HOME</li>
-            <li class="tab-active" data-target="blog">BLOG</li>
-         <!--   <li class="tab-active" data-target="home">HOME</li>    EDIT TO ADD SOMETHING-->
-        </ul>
-    </nav>
+    <div id="desktop-wrapper" class="layout-columns">
 
-    <main id="content-viewer" class="window-body">
-        <section id="home" class="home-window"> <!--EMPIEZA SECCION HOME-->
-
-            <!-- LEFT SIDE WINDOW-->
-
-            
-            <article class="side-window">   
-    <header class="window-title">
-        <h2>~ about me</h2>
-    </header>
-    
-    <div class="window-content">
-        <figure class="profile-pic">
-            <img src="assets/image.png" alt="Tase icon">
-        </figure>
-
-        <div class="profile-data">
-            <h3>Tase</h3>
-            <table class="info-table">
-                <tr>
-                    <td class="label">Age</td>
-                    <td class="value">21</td>
-                </tr>
-                <tr>
-                    <td class="label">Country</td>
-                    <td class="value">CL <i class="flag-cl"></i></td>
-                </tr>
-                <tr>
-                    <td class="label">Personality</td>
-                    <td class="value">INFJ-T</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</article>
-
-
-<article class="side-window">   
-    <header class="window-title">
-        <h2>~ about me</h2>
-    </header>
-    
-    <div class="window-content">
-        <figure class="profile-pic">
-            <img src="assets/image.png" alt="Tase icon">
-        </figure>
-
-        <div class="profile-data">
-            <h3>Tase</h3>
-            <table class="info-table">
-                <tr>
-                    <td class="label">Age</td>
-                    <td class="value">21</td>
-                </tr>
-                <tr>
-                    <td class="label">Country</td>
-                    <td class="value">CL <i class="flag-cl"></i></td>
-                </tr>
-                <tr>
-                    <td class="label">Personality</td>
-                    <td class="value">INFJ-T</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</article>
-
-            
-            
-            
-
-            <div class="about-content">
-                <p>I'm Benjamin "Tase" Vasquez, Chilean and a Tech lover, I'm a studing for a degree in computer engineering. Afficionate of learning new things and, most importantly, learning everyday on how to be better version of myself.</p>
-            </div>
-
-        </section> <!--FINALIZA SECCION HOME-->
-
-
-        <section id="skills" class="">  <!-- EMPIEZA SECCION BLOG-->
-            <h2> Skills</h2>
-            
-            <div class="skill-grid">
-
-                <article class="skills-card">
-                    <h3>Languages</h3>
-                    <div class="icon-group">
-                        <i class="devicon-cplusplus-plain colored"></i>
-                        <i class="devicon-python-plain colored"></i>
-                        <i class="devicon-bash-plain"></i>
-                    </div>
-                </article>
-
-                <article class="skills-card">
-                    <h3>Learning</h3>
-                    <div class="icon-group">
-                        <i class="devicon-rust-plain colored"></i>
-                        <i class="devicon-html5-plain colored"></i>
-                        <i class="devicon-css3-plain colored"></i>
-                    </div>
-                </article>
-
-                <article class="skills-card os-card">
-                    <h3>Current OS</h3>
-                        <i class="devicon-archlinux-plain colored"></i>
-                        <p>Arch Linux</p>
-                </article>
-
-                <article class="skills-card">
-                    <h3>Tools</h3>
-                    <div class="icon-group">
-                        <i class="devicon-git-plain colored"></i>
-                        <i class="devicon-vim-plain colored"></i>
-                        <i class="devicon-vscode-plain colored"></i>
-                    </div>
-                </article>
-
-            </div>
-
-        </section> <!-- FINALIZA SECCION BLOG-->
-
-        <section id="projects">
-            <h2> My Projects...</h2>
-            <p>Please take a look of what i've been doing (*u*)</p>
-
-            <div class="project-grid">
-
-                <article class="project-card">
-                    <a href="https://github.com/Tasesho/clip_assistant" target="_blank" title="Open clip_assistant repository on Github">
-                        <h3>Command line Assistant</h3>
-                        <p>Built in C++, Clippy help you in the console.</p>
-                        <footer>View on Github</footer>
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <a href="https://github.com/Tasesho/script-Arch-post-install" target="_blank" title="Open Arch Post Install repository on Github">
-                        <h3>Arch Post Install</h3>
-                        <p>Bash commands to automatize the post instalation.</p>
-                        <footer>View on Github</footer>
-                    </a>
-                </article>
-                
-                <article class="project-card">
-                    <a href="https://github.com/Tasesho/mcMonitor" target="_blank" title="Open mcMonitor repository on Github">
-                        <h3>mcMonitor</h3>
-                        <p>Bot for discord, monitors if server is online.</p>
-                        <footer>View on Github</footer>
-                    </a>
-                </article>
-
-                <article class="project-card">
-                    <a href="https://github.com/Tasesho/Universidad" target="_blank" title="Open Universidad repository on Github">
-                        <h3>Universidad</h3>
-                        <p>Recopilation of some codes that I developed while I was in Uni.</p>
-                        <footer>View on Github</footer>
-                    </a>
-                </article>
-            </div>
-
-        </section>
-
-        <section id="vision" class="vision-card">
-            <header class="vision-header">
-                <h2> True efficiency is born from curiosity...</h2>
-            </header>
-
-            <div class="vision-content">
-                <blockquote class="statement"> To develop efficiently is to develop consciously. Curiosity is the only tool that prevents the stagnation of an automated workflow. The moment a first PC was stripped down to its core was the moment a life-long philosophy took shape: understanding the smallest part is essential to mastering the entire system. Logic, priority, and depth are the pillars of my craft.</blockquote>
-                    
+        <!--RIGHTSIDE-->
+        <aside class="sidebar-right" aria-label="about-me">  
+            <article class="widget-window">
+                <div class="widget-title">~ ABOUT ME</div>
+                <div class="widget-body">
+                    <figure class="profile-pic">
+                        <img src="/assets/image.png" alt="tase-icon">
+                    </figure>
+                <table class="table-info">
+                    <tr>
+                        <td class="info-key">Age</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td class="info-key">Country</td>
+                        <td>Chile</td>
+                    </tr>
+                    <tr>
+                        <td class="info-key">Personality</td>
+                        <td>INFJ-T</td>
+                    </tr>
+                </table>
                 </div>
-        </section>
+            </article>
 
-        <section id="soft-skills" class="skills-container">
-            <h3>Usuful skills & Mentality</h3>
-            <ul class="soft-skills-grid">
-                <li>Problem solving</li>
-                <li>Resource Management</li>
-                <li>Strategic Planning</li>
-                <li>Role accountability</li>
-                <li>Autodidact</li>
-            </ul>
-        </section>
-</main>
+            <article class="widget-window">
+                <div class="widget-title">~ ANIME</div>
+                <div class="widget-body anime-list">
+                    <span class="anime-tag">Monogatari Series</span>
+                    <span class="anime-tag">Frieren</span>
+                    <span class="anime-tag">JJK</span>
+                    <span class="anime-tag">Mahoutsukai no Yome</span>
+                    <span class="anime-tag">Bocchi the Rock!</span>
+                    <span class="anime-tag">Fate Series</span>
+                    <span class="anime-tag">Dungeon Meshi</span>
+                    <span class="anime-tag">FMA:B</span>
+                    <span class="anime-tag">Koe no Katachi</span>
+                    <span class="anime-tag">Vinland</span>
+                    <span class="anime-tag">TTGL</span>
+                    <span class="anime-tag">Re:Zero</span>
+            </article>
+
+            <article class="widget-window">
+                <div class="widget-title">~ GAMES</div>
+                <div class="widget-body game-list">
+                    <span class="anime-tag">Alan Wake</span>
+                    <span class="anime-tag">Outlast</span>
+                    <span class="anime-tag">Resident Evil 4</span>
+                    <span class="anime-tag">Death Stranding</span>
+                    <span class="anime-tag">Dead by Daylight</span>
+                    <span class="anime-tag">CS2</span>
+                    <span class="anime-tag">LoL</span>
+                    <span class="anime-tag">TBOI</span>
+                    <span class="anime-tag">Overwatch</span>
+                    <span class="anime-tag">Satisfactory</span>
+                    <span class="anime-tag">Hollow Knight</span>
+                    <span class="anime-tag">Persona 3/4/5</span>
+                </div>
+            </article>
+        </aside>
+
+        <!--CENTER-->
+        <main class="main-content">
+            <article class="window-introduction">
+                <div class="widget-title">~ INTRODUCTION.sh</div>
+                <section id="intro" class="bio-window">
+                <div class="bio-content">
+                <p>
+            hey, i'm Tase. i'm an <strong>informatic engineering student</strong>. 
+            currently diving deep into <strong>Rust</strong>, <strong>HTML5</strong>, <strong>CSS3</strong> and <strong>Javascript</strong>. 
+            building web systems and breaking my PC on <strong>Arch</strong>. self-taught. Learned the hard way.
+                </p>
         
-    <footer class="main-footer">
-        <div class="footer-content">
-            <nav class="footer-nav">
-                <a href="me/index.html" class="me-link">
-                    <span class="prompt">~/</span> More_About_Me
-                </a>
-                <a href="../blog/index.html" class="blog-link">
-                    <span class="prompt">~/</span> Go_to_Blog
-                </a>
-            </nav>
+                <p>
+            outside of that: <strong>anime</strong>, <strong>y2k internet</strong>, and exploring <strong>tech aesthetics</strong>. 
+            big fan of <strong>Tokyo Ghoul</strong> and <strong>Mahoutsukai no Yome</strong>.
+                </p>
 
-            <address>
-                <p>Santiago, Chile | <a href="mailto:benjam.vsqz@gmail.com">benjam.vsqz@gmail.com</a></p>
-            </address>
-
-            <ul class="contact-link">
-                <li><a href="https://github.com/Tasesho" target="_blank"><i class="devicon-github-original"></i> Github</a></li>
-            </ul>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Tase - Built with Curiosity and Passion</p>
+                <p>
+            currently 21, based in <strong>Chile</strong>. 
+            learning every day how to be a better version of myself.
+                </p>
             </div>
-        </div>
-    </footer>
+            </section>
+            </article>
+    </div>
 </body>
 </html>
