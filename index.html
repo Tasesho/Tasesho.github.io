@@ -3,41 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tase | Portfolio</title>
+    <title>⛧ Tase ⛧</title>
+    <!--FUENTES PARA TITULOS 'EXO2' FUENTE PARA CUERPO 'titillium web'-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="static/devicon.min.css">
     <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <header>
 
-
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">My Projects</a></li>
+    <nav class="folder-tabs">
+        <ul id="tab-list">
+            <li class="tab-active" data-target="home">HOME</li>
+            <li class="tab-active" data-target="blog">BLOG</li>
+         <!--   <li class="tab-active" data-target="home">HOME</li>    EDIT TO ADD SOMETHING-->
         </ul>
     </nav>
- </header>
 
-    <main>
-        <section id="about" class="about-card">
-            <figure class="about-icon">
-                <img src="assets/image.png" alt="Tase icon">
-            </figure>
+    <main id="content-viewer" class="window-body">
+        <section id="home" class="home-window"> <!--EMPIEZA SECCION HOME-->
+
+            <!-- LEFT SIDE WINDOW-->
+            <article class="side-window">   
+    <header class="window-title">
+        <h2>~ about me</h2>
+    </header>
+    
+    <div class="window-content">
+        <figure class="profile-pic">
+            <img src="assets/image.png" alt="Tase icon">
+        </figure>
+
+        <div class="profile-data">
+            <h3>Tase</h3>
+            <table class="info-table">
+                <tr>
+                    <td class="label">Age</td>
+                    <td class="value">21</td>
+                </tr>
+                <tr>
+                    <td class="label">Country</td>
+                    <td class="value">CL <i class="flag-cl"></i></td>
+                </tr>
+                <tr>
+                    <td class="label">Personality</td>
+                    <td class="value">INFJ-T</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</article>
+
+
+<article class="side-window">   
+    <header class="window-title">
+        <h2>~ about me</h2>
+    </header>
+    
+    <div class="window-content">
+        <figure class="profile-pic">
+            <img src="assets/image.png" alt="Tase icon">
+        </figure>
+
+        <div class="profile-data">
+            <h3>Tase</h3>
+            <table class="info-table">
+                <tr>
+                    <td class="label">Age</td>
+                    <td class="value">21</td>
+                </tr>
+                <tr>
+                    <td class="label">Country</td>
+                    <td class="value">CL <i class="flag-cl"></i></td>
+                </tr>
+                <tr>
+                    <td class="label">Personality</td>
+                    <td class="value">INFJ-T</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</article>
+
             
-            <header class="about-header">
-                <h2> About Me...</h2>
-            </header>
+            
+            
 
             <div class="about-content">
                 <p>I'm Benjamin "Tase" Vasquez, Chilean and a Tech lover, I'm a studing for a degree in computer engineering. Afficionate of learning new things and, most importantly, learning everyday on how to be better version of myself.</p>
             </div>
 
-        </section>
+        </section> <!--FINALIZA SECCION HOME-->
 
 
-        <section id="skills">
+        <section id="skills" class="">  <!-- EMPIEZA SECCION BLOG-->
             <h2> Skills</h2>
             
             <div class="skill-grid">
@@ -77,7 +138,7 @@
 
             </div>
 
-        </section>
+        </section> <!-- FINALIZA SECCION BLOG-->
 
         <section id="projects">
             <h2> My Projects...</h2>
