@@ -39,6 +39,3 @@ Or use your editor's Live Server extension or any static hosting (GitHub Pages /
 **Contact**
 
 - Owner: Benjamin "Tase" Vasquez — benjam.vsqz@gmail.com
-
---
-Generated to reflect the repository's current files. Tell me if you want a longer README with deployment instructions, contributor guidelines, or a changelog.
