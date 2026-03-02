@@ -1,31 +1,36 @@
-/* 1. VARIABLES CROMÁTICAS Y TIPOGRÁFICAS */
+/* ==========================================================================
+   1. VARIABLES (SISTEMA DE DISEÑO)
+   ========================================================================== */
 :root {
-    /* Paleta extraída de fondoweb.jpg */
-    --win-bg: rgba(26, 26, 26, 0.85); /* Gris carbón traslúcido para legibilidad */
-    --win-blue: #0d0d0d;             /* Negro sólido para barras de título */
-    --accent-acid: #b7ff00;          /* Verde neón de la imagen */
-    --accent-purple: #a284ff;        /* Púrpura eléctrico de contraste */
+    /* Paleta extraída de fondoweb.png */
+    --win-bg: rgba(26, 26, 26, 0.85); 
+    --win-blue: #0d0d0d;             
+    --accent-acid: #b7ff00;
+    --accent-orange: #ff5f1f;        
+    --accent-purple: #a284ff;        
     --text-white: #f0f0f0;
     --bg-fallback: #1a1a1a;
     
-    /* Bordes con relieve retro colorizados */
+    /* Bordes y Sombras */
     --border-light: #444;
     --border-dark: #000;
+    --win-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
 
-    /* Tipografías Google Fonts */
+    /* Tipografías */
     --font-header: 'Exo 2', sans-serif;
     --font-main: 'Titillium Web', sans-serif;
 }
 
-/* 2. RESET Y MODELO DE CAJA GAUCHAT */
+/* ==========================================================================
+   2. RESET Y BASE (ESTÁNDAR GAUCHAT)
+   ========================================================================== */
 * {
-    box-sizing: border-box; /* Incluye padding/border en el cálculo del ancho */
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    /* Imagen de fondo única, fija y centrada */
     background: url("../assets/fondoweb.png") no-repeat center center fixed var(--bg-fallback);
     background-size: cover;
     font-family: var(--font-main);
@@ -35,28 +40,31 @@ body {
     min-height: 100vh;
 }
 
-/* 3. SISTEMA DE 3 COLUMNAS (GRID) */
+/* ==========================================================================
+   3. MAQUETACIÓN GLOBAL (GRID)
+   ========================================================================== */
 .layout-columns {
     display: grid;
-    /* Sidebar Izq: 280px | Centro: Flexible | Sidebar Der: 280px */
     grid-template-columns: 280px 1fr 280px;
     gap: 20px;
     max-width: 1400px;
     margin: 0 auto;
+    align-items: start;
 }
 
-/* 4. COMPONENTES: VENTANAS RETRO Y2K */
-.widget-window, .window-introduction {
+/* ==========================================================================
+   4. COMPONENTES (VENTANAS RETRO Y2K)
+   ========================================================================== */
+.widget-window, 
+.window-introduction,
+.window-skills {
     background: var(--win-bg);
-    /* Efecto de cristal esmerilado (Glassmorphism) */
     backdrop-filter: blur(8px); 
     border: 2px solid var(--accent-purple);
-    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--win-shadow);
     margin-bottom: 20px;
-    /* Eliminamos el color negro para que el texto herede el blanco del body */
 }
 
-/* Barra de Título (Cabecera de Componente) */
 .widget-title {
     background: var(--win-blue);
     border-bottom: 2px solid var(--accent-purple);
@@ -70,15 +78,34 @@ body {
     text-transform: uppercase;
 }
 
+.widget-body {
+    padding: 15px;
+}
+
+.widget-window, 
+.window-introduction,
+.window-skills,
+.window-projects { 
+    background: var(--win-bg);
+    backdrop-filter: blur(8px); 
+    border: 2px solid var(--accent-purple);
+    box-shadow: var(--win-shadow);
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   5. CONTENIDO ESPECÍFICO (WIDGETS Y BIO)
+   ========================================================================== */
+
+/* --- Introducción / Bio --- */
 .bio-window {
     padding: 20px;
-    /* Borde punteado lila como en la imagen de referencia */
     border: 1px dashed var(--accent-purple);
     background: rgba(162, 132, 255, 0.05);
 }
 
 .bio-content {
-    text-transform: lowercase; /* Estética minimalista / lowercase */
+    text-transform: lowercase;
 }
 
 .bio-content p {
@@ -87,13 +114,12 @@ body {
 
 .bio-content strong {
     font-family: var(--font-header);
-    color: var(--accent-acid); /* Verde neón para resaltar conceptos */
+    color: var(--accent-acid);
     font-weight: 800;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-
-/* --- AJUSTES PARA LA TABLA DE INFORMACIÓN --- */
+/* --- Tablas de Información --- */
 .table-info {
     width: 100%;
     border-collapse: collapse;
@@ -112,17 +138,14 @@ body {
 
 .table-info td:not(.info-key) {
     color: var(--text-white);
-    text-align: right; /* Alinea los valores a la derecha para simetría */
+    text-align: right;
 }
 
-/* --- ESTILO DE TAGS (ANIME & GAMES) --- */
-.widget-body {
-    padding: 15px;
-}
-
-.anime-list, .game-list {
+/* --- Listas de Tags (Anime & Games) --- */
+.anime-list, 
+.game-list {
     display: flex;
-    flex-wrap: wrap; /* Permite que los tags bajen a la siguiente línea */
+    flex-wrap: wrap;
     gap: 8px;
 }
 
@@ -140,10 +163,133 @@ body {
 .anime-tag:hover {
     background: var(--accent-acid);
     color: var(--win-blue);
-    cursor: crosshair; /* Cursor estilo retro */
+    cursor: crosshair;
+}
+.projects-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/* --- IMAGEN DE PERFIL --- */
+.project-item {
+    font-family: var(--font-main);
+    font-size: 0.9rem;
+    color: var(--text-white);
+    text-transform: lowercase;
+}
+
+/* Estilizamos el link del proyecto para que no sea azul */
+.project-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Reutilizamos el estilo code-tag pero con un hover especial para proyectos */
+.project-item .code-tag:hover {
+    background: var(--accent-acid);
+    border-color: var(--accent-acid);
+    color: var(--win-blue);
+    box-shadow: 0 0 10px var(--accent-acid);
+}
+
+/* ==========================================================================
+   6. SECCIÓN DE SKILLS (.INI STYLE)
+   ========================================================================== */
+.skills-window {
+    padding: 15px;
+    background: transparent; /* Mantiene la transparencia del padre */
+}
+
+.skills-content p {
+    color: var(--accent-purple);
+    font-family: var(--font-header);
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    text-transform: lowercase;
+}
+
+.code-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.code-tag {
+    border: 1px solid var(--accent-orange);
+    color: var(--text-white);
+    padding: 2px 8px;
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    text-transform: lowercase;
+    background: rgba(255, 95, 31, 0.05); 
+    transition: 0.3s ease;
+}
+
+.code-tag:hover {
+    background: var(--accent-orange);
+    color: var(--win-blue);
+    box-shadow: 0 0 8px var(--accent-orange);
+    cursor: crosshair;
+}
+
+.status-line {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(162, 132, 255, 0.3); /* Separación sutil */
+    color: var(--accent-acid);
+    font-family: var(--font-header);
+    font-size: 0.8rem;
+    font-style: italic;
+    opacity: 0.6; /* Efecto de texto de sistema en segundo plano */
+    text-transform: lowercase;
+}
+
+/* Un pequeño detalle: que el ";" inicial brille un poco más */
+.status-line::before {
+    content: "> ";
+    color: var(--accent-orange);
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   7. ELEMENTOS ESPECIALES (SINGLE TAGS E IMÁGENES)
+   ========================================================================== */
+
+/* Contenedor de alineación */
+div.single-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+/* Etiqueta individual */
+p.single-tag {
+    border: 1px solid var(--accent-acid);
+    color: var(--text-white);
+    padding: 4px 12px;       
+    font-family: var(--font-main);
+    text-transform: lowercase;
+    background: rgba(183, 255, 0, 0.05); 
+    white-space: nowrap;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+p.single-tag a {
+    color: inherit;
+    text-decoration: none;
+    display: block; 
+    width: 100%;
+}
+
+p.single-tag a:hover {
+    color: var(--accent-acid);
+    cursor: pointer;
+}
+
+/* Imagen de Perfil */
 .profile-pic {
     width: 100%;
     display: flex;
@@ -159,10 +305,44 @@ body {
     background: var(--win-blue);
 }
 
-
-/* 6. RESPONSIVIDAD */
+/* ==========================================================================
+   8. RESPONSIVIDAD (MEDIA QUERIES)
+   ========================================================================== */
 @media (max-width: 1024px) {
     .layout-columns {
-        grid-template-columns: 1fr; /* Apilado vertical en móviles/tablets */
+        grid-template-columns: 1fr;
     }
+}
+
+/* ==========================================================================
+   9. FOOTER (SISTEMA DE CRÉDITOS)
+   ========================================================================== */
+.main-footer {
+    width: 100%;
+    margin-top: 40px;
+    padding: 20px 0;
+    background: rgba(13, 13, 13, 0.5); /* Opacidad al 50% usando el color win-blue */
+    backdrop-filter: blur(4px);      /* Suaviza el fondo de bosque */
+    border-top: 1px dashed var(--accent-purple);
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: var(--font-main);
+    color: rgba(240, 240, 240, 0.5); /* Texto también al 50% de opacidad */
+    text-transform: lowercase;
+    font-size: 0.85rem;
+}
+
+.footer-content strong {
+    color: var(--accent-acid);
+    opacity: 0.8; /* Los acentos resaltan un poco más que el resto */
+}
+
+.main-footer .status-line {
+    margin-top: 5px;
+    border-top: none; /* Quitamos la línea para el footer */
+    padding-top: 0;
 }
