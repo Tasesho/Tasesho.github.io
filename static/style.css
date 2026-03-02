@@ -81,6 +81,57 @@ body {
 /* ==========================================================================
    4. COMPONENTES (VENTANAS RETRO Y2K)
    ========================================================================== */
+.top-taskbar {
+    position: sticky;
+    top: 0;
+    z-index: 999; /* Asegura que esté por encima de las ventanas */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.music-player {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 15px;
+    margin-bottom: 0; /* Anula el margin inferior de widget-window */
+    border-color: var(--accent-acid); /* Diferenciamos el reproductor con verde ácido */
+}
+
+.player-btn {
+    background: transparent;
+    border: 1px solid var(--accent-acid);
+    color: var(--accent-acid);
+    font-family: var(--font-header);
+    text-transform: lowercase;
+    padding: 2px 8px;
+    cursor: crosshair;
+    transition: 0.2s;
+}
+
+.player-btn:active {
+    background: var(--accent-orange);
+    border-color: var(--accent-orange);
+    color: var(--win-blue);
+}
+
+.player-btn:hover {
+    background: var(--accent-acid);
+    color: var(--win-blue);
+}
+
+.track-info {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+#track-name {
+    margin: 0;
+    padding: 0;
+    border: none;
+    white-space: nowrap;
+}
+
 .widget-window, 
 .window-introduction,
 .window-skills {
@@ -163,6 +214,11 @@ body {
 }
 
 .table-info td:not(.info-key) {
+    color: var(--text-white);
+    text-align: right;
+}
+
+.table-info a:not(.info-key) {
     color: var(--text-white);
     text-align: right;
 }

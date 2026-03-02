@@ -8,6 +8,20 @@
 </head>
 <body>
 
+    <header class="top-taskbar">
+    <div class="music-player widget-window">
+        <div class="player-controls">
+            <button id="prev-btn" class="player-btn">prev</button>
+            <button id="play-btn" class="player-btn">play</button>
+            <button id="next-btn" class="player-btn">next</button>
+        </div>
+        <div class="track-info">
+            <span id="track-name" class="status-line">now_playing: none</span>
+        </div>
+        <audio id="audio-element"></audio>
+    </div>
+</header>
+
     <div id="desktop-wrapper" class="layout-columns">
 
         <!--LEFTSIDE-->
@@ -273,5 +287,6 @@
         <p class="status-line">system_uptime: stable | session: active</p>
     </div>
 </footer>
+<script src="/static/music.js"></script>
 </body>
 </html>
